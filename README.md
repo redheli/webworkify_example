@@ -5,7 +5,9 @@ Most code borrow from webworkify's exmaple.
 
 
 # install
+```bash
 npm install
+```
 
 you also can run: 
 ```bash

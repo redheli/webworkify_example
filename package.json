@@ -1,0 +1,32 @@
+{
+  "name": "max-test-webworkify",
+  "description": "max-test-webworkify",
+  "version": "0.0.0",
+  "main": "js/main.js",
+  "license": "BSD-3-Clause",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mapbox/mapbox-gl-js.git"
+  },
+  "dependencies": {
+    "brfs": "^1.4.0",
+    "gamma": "~0.1.0",
+    "envify": "^3.4.0",
+    "webworkify": "^1.0.2"
+  },
+  "devDependencies": {
+    "gamma": "~0.1.0",
+    "tape": "~1.0.4"
+  },
+  "browserify": {
+    "transform": [
+      "envify",
+      "brfs"
+    ]
+  },
+  "scripts": {
+    "start": "node main.js",
+    "build": "browserify -d js/main.js --standalone max-test-webworkify > dist/max-test-webworkify-dev.js",
+    "production": "browserify js/main.js --debug --transform unassertify --plugin [minifyify --map max-test-webworkify.js.map --output dist/mapbox-gl.js.map] --standalone max-test-webworkify > dist/max-test-webworkify.js"
+  }
+}

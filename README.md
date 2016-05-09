@@ -1,12 +1,16 @@
 # webworkify example
-example of using [webworkify](https://github.com/substack/webworkify). 
-[browserifying](http://browserify.org) cmd: 
-```bash
-browserify -d js/main.js --standalone max-test-webworkify > dist/max-test-webworkify-dev.js
-```
+
+this example just show the whole process  of how use [browserifying](http://browserify.org) and [webworkify](https://github.com/substack/webworkify) together in webpage.
+Most code borrow from webworkify's exmaple.
+
 
 # install
 npm install
+
+you also can run: 
+```bash
+browserify -d js/main.js --standalone max-test-webworkify > dist/max-test-webworkify-dev.js
+```
 
 # run
 1. setup a simple web server
